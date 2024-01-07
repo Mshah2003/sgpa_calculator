@@ -39,11 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'calculator',
-    'simple_analytics',
 ]
 # settings.py
-
-SIMPLE_ANALYTICS_CODE = 'your-analytics-code'
 
 
 MIDDLEWARE = [
