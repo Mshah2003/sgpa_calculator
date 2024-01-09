@@ -83,6 +83,8 @@ body{
 </head>
 <h1>{% if result_sgpa %}
     <p style="color:red; font-size:x-large">Your SGPA is {{ result_sgpa }}</p>
+{% elif result_sgpa == 0 %}
+<p style="color:red; font-size:x-large">Karo Semester repeat</p>
 {% else %}
 <p style="color:red; font-size:x-large">Select correct choices of grades</p>
 {% endif %}</h1>
@@ -91,16 +93,26 @@ body{
 <form method="post" action="{% url 'calculate_sgpa' %}">
     {% csrf_token %}
     {{ form.as_p }}
+    <style>
+        select {
+            font-size: 25px;
+            text-align: center;
+        }
+    </style>
     <input type="submit" value="Calculate" style="width: 200px; height: 40px;">
 </form>
 
-
 {% if result_sgpa %}
     <p style="color:red; font-size:x-large">Your SGPA is {{ result_sgpa }}</p>
+{% elif result_sgpa == 0 %}
+<p style="color:red; font-size:x-large">Karo Semester repeat</p>
+{% else %}
+<p style="color:red; font-size:x-large">Select correct choices of grades</p>
 {% endif %}
 
 <h5 style="color: blue;">
-    <a href="mailto:2021pcecsmegh102@poornima.org" style="text-decoration: none; color: blue;">Created by Megh Shah  (PCE21CS102)</a>
+    <a href="mailto:2021pcecsmegh102@poornima.org" style="text-decoration: none; color: blue;">Created by Megh Shah(PCE21CS102)   </a>
+    <a href="mailto:2021pcecsmegh102@poornima.org" style="text-decoration: none; color: blue;"><small><br><u>Any Suggestions?</u></small></a>
 </h5>
 <h5 style="color: green;">
     Developed with python
