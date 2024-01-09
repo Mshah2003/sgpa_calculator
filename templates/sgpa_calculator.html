@@ -91,8 +91,9 @@ body{
 <form method="post" action="{% url 'calculate_sgpa' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Calculate">
+    <input type="submit" value="Calculate" style="width: 150px; height: 25px;">
 </form>
+
 
 {% if result_sgpa %}
     <p style="color:red; font-size:x-large">Your SGPA is {{ result_sgpa }}</p>
