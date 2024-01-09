@@ -52,12 +52,13 @@ def calculate_sgpa(request):
 
             total_grade_points = EM + BEE + EC + BME + CS + CL + LL + MPW + BEEL + CAED + DECA
 
-            if total_grade_points == 0:
-                # Handle division by zero
-                error_message = "Total grade points are zero. Please enter valid grades."
-                context = {'form': form, 'error_message': error_message}
-                return render(request, 'sgpa_calculator.html', context)
+            # if not total_grade_points:
+            #     # Handle division by zero
+            #     result_sgpa = 0
+            #     context = {'form': form, 'result_sgpa': result_sgpa}
+            #     return render(request, 'sgpa_calculator.html', context)
 
+        
             result_sgpa = total_grade_points / 20.5
 
             # Pass the calculated result to the template
