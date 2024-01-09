@@ -16,7 +16,7 @@ class SGPAForm(forms.Form):
         ('F', 'F'),
     ]
 
-    CHOICE_SIZE = {'style': 'width: 200px; height: 30px;'}  # You can adjust the width and height as needed
+    CHOICE_SIZE = {'style': 'width: 500px; height: 50px;'}  # You can adjust the width and height as needed
 
     EM = forms.ChoiceField(choices=GRADE_CHOICES, label="Engineering Mathematics", widget=forms.Select(attrs=CHOICE_SIZE))
     BEE = forms.ChoiceField(choices=GRADE_CHOICES, label="Basic Electrical Engg / Basic Civil Engg", widget=forms.Select(attrs=CHOICE_SIZE))
